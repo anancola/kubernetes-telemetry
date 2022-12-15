@@ -14,6 +14,7 @@ $ helm inspect values prometheus-community/kube-prometheus-stack > /tmp/kube-pro
 $ wget https://raw.githubusercontent.com/anancola/kubernetes-telemetry/main/prometheus/kube-prometheus-stack.values
 
 $ helm install prometheus-community/kube-prometheus-stack --create-namespace --namespace prometheus --generate-name --values /tmp/kube-prometheus-stack.values
+$ kubectl apply -f https://raw.githubusercontent.com/anancola/kubernetes-telemetry/main/prometheus/gafana-patch.yaml
 $ kubectl get svc -n prometheus
 
 ```
